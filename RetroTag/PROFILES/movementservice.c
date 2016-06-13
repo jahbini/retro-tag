@@ -428,7 +428,7 @@ bStatus_t Movement_getParameter(uint8_t param, void *value)
   void JAHDebug(int);
   switch (param)
   {
-    case SENSOR_DATA: /* JAH data read for bluetooth */
+    case SENSOR_DATA: /* JAH data read for bluetooth JAH mod comment to check proper import to TI Cloud */
       JAHDebug(33);
       memcpy(value, sensorData, SENSOR_DATA_LEN);
       break;
