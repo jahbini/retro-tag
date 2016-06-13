@@ -57,9 +57,14 @@
 bleUserCfg_t user0Cfg = BLE_USER_CFG;
 
 #endif // USE_DEFAULT_USER_CFG
-
+int lastArb =0;
+void JAHDebug(arb)
+{
+    lastArb =arb;
+}
 int main()
 {
+  JAHDebug(1);
   PIN_init(BoardGpioInitTable);
 
 #ifndef POWER_SAVING

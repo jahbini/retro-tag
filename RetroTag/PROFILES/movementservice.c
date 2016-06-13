@@ -425,10 +425,11 @@ bStatus_t Movement_setParameter(uint8_t param, uint8_t len, void *value)
 bStatus_t Movement_getParameter(uint8_t param, void *value)
 {
   bStatus_t ret = SUCCESS;
-
+  void JAHDebug(int);
   switch (param)
   {
-    case SENSOR_DATA:
+    case SENSOR_DATA: /* JAH data read for bluetooth */
+      JAHDebug(33);
       memcpy(value, sensorData, SENSOR_DATA_LEN);
       break;
 
@@ -643,4 +644,4 @@ static bStatus_t sensor_WriteAttrCB(uint16_t connHandle, gattAttribute_t *pAttr,
 }
 
 /*********************************************************************
-*******************************************************************
+*********************************************************************/

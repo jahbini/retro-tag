@@ -63,7 +63,7 @@ extern "C"
 // Sensor Profile Services bit fields
 #define MOVEMENT_SERVICE               0x00000020
 
-// Length of sensor data in bytes
+// Length of sensor data in bytes  // JAH 20  bytes is also OK 18 is Vendor
 #define MOVEMENT_DATA_LEN              18
 
 /*********************************************************************
@@ -125,4 +125,4 @@ extern bStatus_t Movement_getParameter(uint8_t param, void *value);
 }
 #endif
 
-#endif /* MOVEMENTSERVICE_H
+#endif /* MOVEMENTSERVICE_H */
